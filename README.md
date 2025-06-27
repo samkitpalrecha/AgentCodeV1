@@ -12,8 +12,22 @@ AgentCodeV1 is a browser-based Python IDE built using React, Monaco Editor, and 
 
 ## Folder Structure
 
-<pre> ```plaintext AgentCodeV1/ ├── public/ ├── src/ │ ├── components/ │ │ ├── CodeEditor.jsx │ │ ├── OutputPane.jsx │ │ └── Toolbar.jsx │ ├── utils/ │ │ └── pyodideRunner.js │ ├── App.jsx │ └── main.jsx ├── package.json ├── vite.config.js └── README.md ``` </pre>
-
+```plaintext
+AgentCodeV1/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── CodeEditor.jsx
+│   │   ├── OutputPane.jsx
+│   │   └── Toolbar.jsx
+│   ├── utils/
+│   │   └── pyodideRunner.js
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+├── vite.config.js
+└── README.md
+```
 
 ## Getting Started
 
