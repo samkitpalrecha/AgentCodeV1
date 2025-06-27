@@ -1,12 +1,64 @@
-# React + Vite
+# AgentCodeV1
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AgentCodeV1 is a browser-based Python IDE built using React, Monaco Editor, and Pyodide. It allows users to write and run Python code directly in the browser without needing any server or backend.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Monaco Editor with Python syntax highlighting
+- Run button to execute Python code using Pyodide
+- Output console to show printed output or errors
+- Toolbar with Run, Debug, Test, and Explain buttons (placeholders)
+- Split-screen layout: editor on the left, output on the right
 
-## Expanding the ESLint configuration
+## Folder Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+AgentCodeV1/
+├── public/
+├── src/
+│ ├── components/
+│ │ ├── CodeEditor.jsx
+│ │ ├── OutputPane.jsx
+│ │ └── Toolbar.jsx
+│ ├── utils/
+│ │ └── pyodideRunner.js
+│ ├── App.jsx
+│ └── main.jsx
+├── package.json
+├── vite.config.js
+└── README.md
+
+
+## Getting Started
+
+### Requirements
+
+- Node.js installed
+- Git installed
+
+### Setup Instructions
+
+1. Clone the repository:
+
+git clone https://github.com/samkitpalrecha/AgentCodeV1.git
+cd AgentCodeV1
+
+2. Install dependencies:
+npm install
+
+3. Run the app:
+npm run dev
+
+4. Open the app in a browser at:
+http://localhost:5173
+
+
+## How It Works
+
+The editor is implemented using Monaco Editor. When the "Run" button is clicked, the code is executed using Pyodide (a WebAssembly-based Python runtime), and the result is shown in the output pane. Output is captured using `setStdout` and `setStderr` hooks provided by Pyodide.
+
+## Future Improvements
+
+- Hook up Debug, Test, and Explain buttons with real logic
+- Add keyboard shortcut to run code
+- Optionally support saving and loading files
+- Improve layout and theming
