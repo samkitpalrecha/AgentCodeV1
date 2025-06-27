@@ -13,7 +13,7 @@ AgentCodeV1 is a browser-based Python IDE built using React, Monaco Editor, and 
 ## Folder Structure
 
 AgentCodeV1/
-├── public/
+- ├── public/
 ├── src/
 │ ├── components/
 │ │ ├── CodeEditor.jsx
